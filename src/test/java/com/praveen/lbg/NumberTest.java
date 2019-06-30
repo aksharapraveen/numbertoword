@@ -17,9 +17,13 @@ public class NumberTest {
 
 	@Test
 	public void numberToText() {
-		String one = numberToWordConverterUtilImpl.convertToWords(1L);
-		System.out.println("res=" + one);
-		assertEquals("One", one);
+		String one = numberToWordConverterUtilImpl.convertToWords(105l);
+		assertEquals("One Hundred  Five", one);
 	}
 
+	@Test
+	public void negativNumberToText() {
+		String one = numberToWordConverterUtilImpl.convertToWords(-105l);
+		assertEquals("Minus One Hundred  Five", one);
+	}
 }

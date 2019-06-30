@@ -102,7 +102,9 @@ public class NumberToWordConverterUtilImpl {
 		try {
 			if (0 == number)
 				return "Zero";
-
+			if (0>number)
+				return inWords +="Minus "+convertToWords(Math.abs(-number));
+								
 			if (number <= 19)
 				return unitMapper.get(number);
 
